@@ -1,0 +1,684 @@
+/* Слайдер для экранов 1250px и меньше */
+@media (max-width: 1250px) {
+    /* Бургер меню */
+    .header__burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+    
+    .header__burger span {
+        width: 100%;
+        height: 2px;
+        background: var(--color-white);
+        border-radius: 1px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Стили для самого бургер-меню */
+    .burger-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        z-index: 1000;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu--open {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .burger-menu__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 31.5vh;
+        background: #ffffff;
+    }
+    
+    .burger-menu__content {
+        position: relative;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30vh;
+        padding: 60px 40px;
+        box-sizing: border-box;
+    }
+    
+    .burger-menu__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .burger-menu__logo-text {
+        font-family: var(--primary-font);
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.1;
+        color: rgba(0, 0, 0, 0.3);
+        text-align: left;
+    }
+    
+    .burger-menu__close {
+        background: transparent;
+        border: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        padding: 0;
+    }
+    
+    .burger-menu__close span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        top: 50%;
+        left: 0;
+        border-radius: 1px;
+    }
+    
+    .burger-menu__close span:first-child {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    
+    .burger-menu__close span:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    
+    .burger-menu__nav {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .burger-menu__nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .burger-menu__nav-link {
+        font-family: var(--primary-font);
+        font-weight: 300;
+        font-size: 24px;
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .burger-menu__nav-link:hover {
+        color: var(--color-green);
+    }
+    
+    .burger-menu__button {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .burger-menu__btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 35px 0 0 0;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #000;
+        color: #000;
+        font-family: var(--primary-font);
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu__btn:hover {
+        color: var(--color-green);
+        border-color: var(--color-green);
+    }
+    
+    .burger-menu__btn-icon {
+        width: 16px;
+        height: 16px;
+        filter: brightness(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .burger-menu__btn:hover .burger-menu__btn-icon {
+        transform: translateX(5px);
+        filter: brightness(0) sepia(1) saturate(100) hue-rotate(120deg);
+    }
+    
+    .header__button {
+        display: none;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    
+    /* Скрываем обычный таймлайн */
+    .timeline__content {
+        display: none;
+    }
+    
+    /* Показываем слайдер */
+    .slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .slider__container {
+        overflow: hidden;
+        width: 100%;
+        max-width: 320px;
+        height: 230px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    /* Обертка для показа SVG иконки */
+    .slider__slide {
+        overflow: visible;
+    }
+    
+    .slider__track {
+        display: flex;
+        transition: transform 0.3s ease;
+        width: 600%;
+    }
+    
+    .slider__slide {
+        width: calc(100% / 6);
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .timeline__item--slide {
+        width: calc(100vw - 40px);
+        max-width: 290px;
+        height: 217px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    /* SVG иконка для слайдера */
+    .timeline__item--slide .timeline__text-icon {
+        position: absolute;
+        right: -24px;
+        top: 10px;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 48px;
+        z-index: 3;
+    }
+    
+    .slider__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .slider__nav {
+        background: transparent;
+        border: none;
+        color: var(--color-white);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: var(--primary-font);
+        font-size: 16px;
+        padding: 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .slider__nav:hover {
+        color: var(--color-green-light);
+    }
+    
+    .slider__nav-arrow {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+/* Планшеты и средние экраны */
+@media (max-width: 1024px) {
+    .container {
+        --container-padding: 16px;
+    }
+    
+    .header__nav-list {
+        gap: 24px;
+    }
+    
+    .main__title {
+        font-size: 72px;
+        margin-bottom: 80px;
+    }
+    
+    .timeline__content {
+        max-width: 700px;
+        gap: 30px;
+    }
+    
+    .timeline__text {
+        max-width: 240px;
+        padding: 16px;
+    }
+    
+    .timeline__text-icon {
+        width: 36px;
+        height: 50px;
+        right: -18px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .timeline__number {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-top: 8px;
+    }
+}
+
+/* Малые планшеты */
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 10px 0 5px;
+    }
+    
+    .header__content {
+        gap: 24px;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .header__logo-text {
+        font-size: 28px;
+    }
+    
+    .header__nav-list {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .header__nav-link {
+        font-size: 16px;
+    }
+    
+    .header__btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .main {
+        padding: 40px 0 60px;
+    }
+    
+    .main__title {
+        font-size: 48px;
+        margin-bottom: 60px;
+    }
+    
+    .timeline__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 400px;
+        gap: 40px;
+    }
+    
+    .timeline__item {
+        justify-self: center !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .timeline__item--1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .timeline__item--2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .timeline__item--3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .timeline__item--4 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .timeline__item--5 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    .timeline__item--6 {
+        grid-column: 1;
+        grid-row: 6;
+    }
+    
+    .timeline__text {
+        max-width: 300px;
+    }
+    
+    .timeline__number {
+        margin-top: 0;
+    }
+    
+    .timeline__text {
+        padding: 20px;
+    }
+    
+    .timeline__text-icon {
+        display: none;
+    }
+    
+    .timeline__connector {
+        display: none;
+    }
+    
+    .main__btn {
+        padding: 14px 40px;
+        font-size: 16px;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    .header__content {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .header__logo-text {
+        font-size: 20px;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    
+    .header__button {
+        display: none;
+    }
+    
+    .header__burger {
+        display: flex;
+    }
+    
+    .header__nav-list {
+        justify-content: center;
+    }
+    
+    .main__title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    .timeline {
+        margin-bottom: 57px;
+    }
+    
+    .timeline__content {
+        max-width: 320px;
+        gap: 30px;
+    }
+    
+    .timeline__text {
+        max-width: 260px;
+        padding: 14px;
+        font-size: 14px;
+    }
+    
+    .timeline__number {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .main__btn {
+        padding: 10px 65px;
+        font-size: 20px;
+    }
+    
+    .modal__content {
+        max-width: 90%;
+        width: 95%;
+    }
+    
+    .modal__body {
+        padding: 50px 20px 30px;
+        font-size: 14px;
+    }
+    
+    .modal__close {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+    .container {
+        --container-padding: 12px;
+    }
+    
+    .main__title {
+        font-size: 28px;
+    }
+    
+    .timeline__content {
+        max-width: 280px;
+    }
+    
+    .timeline__text {
+        max-width: 220px;
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .timeline__number {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    /* Слайдер для экранов 360px и меньше */
+    .timeline__item--slide {
+        width: calc(100vw - 30px);
+        max-width: 280px;
+        height: 200px;
+    }
+    
+    .slider__container {
+        width: 100%;
+        max-width: 300px;
+        height: 210px;
+    }
+    
+    .slider__navigation {
+        max-width: 300px;
+        gap: 20px;
+    }
+    
+    .slider__nav {
+        font-size: 14px;
+        gap: 8px;
+    }
+    
+    .slider__nav-arrow {
+        font-size: 20px;
+    }
+    
+    /* Бургер меню адаптивные стили для 360px */
+    .burger-menu__content {
+        padding: 20px 10px;
+    }
+    
+    .burger-menu__header {
+        margin-bottom: 17px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .burger-menu__logo{
+        margin-right: auto;
+    }
+    
+    .burger-menu__logo-text {
+        font-size: 28px;
+    }
+    
+    .burger-menu__close {
+        width: 35px;
+        height: 35px;
+        font-size: 28px;
+    }
+    
+    .burger-menu__nav-link {
+        font-size: 28px;
+    }
+    
+    .burger-menu__button {
+        padding-bottom: 40px;
+    }
+    
+    .burger-menu__btn {
+        font-size: 16px;
+    }
+}
+
+/* Минимальный размер 320px */
+@media (max-width: 320px) {
+    .container {
+        --container-padding: 10px;
+    }
+    
+    .main__title {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+    
+    .timeline__item--slide {
+        max-width: 305px;
+        max-height: 232px;
+        height: 100%;
+        width: 100%;
+        padding: 42px 17px 33px 17px;
+    }
+    
+    .timeline__item--slide .timeline__number {
+        width: 74px;
+        height: 73px;
+        font-size: 48px;
+    }
+    
+    .timeline__item--slide .timeline__text {
+        padding-top: 16px;
+        font-size: 14px;
+    }
+    
+    .slider__container {
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        max-height: 221px;
+    }
+    
+    .slider {
+        gap: 12px;
+    }
+    
+    .slider__navigation {
+        max-width: 280px;
+        gap: 15px;
+    }
+    
+    .slider__nav {
+        font-size: 14px;
+        gap: 6px;
+        padding: 8px;
+    }
+    
+    .slider__nav-arrow {
+        font-size: 14px;
+    }
+    
+    /* Бургер меню адаптивные стили для 320px */
+    .burger-menu__content {
+        padding: 30px 15px;
+    }
+    
+    .burger-menu__logo-text {
+        font-size: 20px;
+    }
+    
+    .burger-menu__close {
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        margin: 0px 5px 0;
+    }
+    
+    .burger-menu__nav-link {
+        font-size: 14px;
+    }
+    
+    .burger-menu__button {
+        padding-bottom: 30px;
+    }
+    
+    .burger-menu__btn {
+        font-size: 14px;
+    }
+
+    .burger-menu__link {
+        font-size: 12px;
+        color: #000;
+    }
+}

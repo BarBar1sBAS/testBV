@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay Light.woff2') format('woff2'),
+         url('../fonts/Actay Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay Wide Bd.woff2') format('woff2'),
+         url('../fonts/Actay Wide Bd.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

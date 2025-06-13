@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Hunters</title>
+    <meta name="description" content="Epic Hunters - Lorem ipsum dolor sit amet consectetur adipisicing elit">
+    <!-- CSS файлы будут автоматически подключены webpack'ом -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__content-left">
+                    <div class="header__logo">
+                        <span class="header__logo-text">Epic<br>Hunters</span>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Loren Ipsum</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Loren Ipsum</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Loren Ipsum</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__button">
+                    <button class="header__btn" type="button">
+                        <span class="header__btn-text">LOREN IPSUM</span>
+                        <img src="img/link_arrow.svg" alt="" class="header__btn-icon">
+                    </button>
+                </div>
+                
+                <!-- Бургер меню для мобильной версии -->
+                <button class="header__burger" type="button" id="burgerButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Бургер меню -->
+    <div class="burger-menu" id="burgerMenu">
+        <div class="burger-menu__overlay"></div>
+        <div class="burger-menu__content">
+            <div class="burger-menu__header">
+                <div class="burger-menu__logo">
+                    <span class="burger-menu__logo-text">Epic<br>Hunters</span>
+                </div>
+                <a href="#" class="burger-menu__link">Lorem ipsum</a>
+                <button class="burger-menu__close" type="button" id="closeBurgerMenu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="burger-menu__nav">
+                <ul class="burger-menu__nav-list">
+                    <li class="burger-menu__nav-item">
+                        <a href="#" class="burger-menu__nav-link">Loren Ipsum</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="#" class="burger-menu__nav-link">Loren Ipsum</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="#" class="burger-menu__nav-link">Loren Ipsum</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="burger-menu__button">
+                <button class="burger-menu__btn" type="button">
+                    <span class="burger-menu__btn-text">LOREN IPSUM</span>
+                    <img src="img/link_arrow.svg" alt="" class="burger-menu__btn-icon">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">Loren Ipsum</h1>
+
+            <section class="timeline">
+                <!-- Слайдер для мобильной версии -->
+                <div class="slider" id="slider">
+                    <div class="slider__container">
+                        <div class="slider__track" id="sliderTrack">
+                            <div class="slider__slide">
+                                <div class="timeline__item timeline__item--slide">
+                                    <div class="timeline__number">1</div>
+                                    <div class="timeline__text">
+                                        <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="timeline__item timeline__item--slide">
+                                    <div class="timeline__number">2</div>
+                                    <div class="timeline__text">
+                                        <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="timeline__item timeline__item--slide">
+                                    <div class="timeline__number">3</div>
+                                    <div class="timeline__text">
+                                        <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="timeline__item timeline__item--slide">
+                                    <div class="timeline__number">4</div>
+                                    <div class="timeline__text">
+                                        <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="timeline__item timeline__item--slide">
+                                    <div class="timeline__number">5</div>
+                                    <div class="timeline__text">
+                                        <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="timeline__item timeline__item--slide">
+                                    <div class="timeline__number">6</div>
+                                    <div class="timeline__text">
+                                        <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider__navigation">
+                        <button class="slider__nav slider__nav--prev" type="button" id="prevSlide">
+                            <span class="slider__nav-arrow">←</span>
+                            <span class="slider__nav-text">lorem ipsum</span>
+                        </button>
+                        
+                        <button class="slider__nav slider__nav--next" type="button" id="nextSlide">
+                            <span class="slider__nav-text">lorem ipsum</span>
+                            <span class="slider__nav-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="timeline__content">
+                    <article class="timeline__item timeline__item--1">
+                        <div class="timeline__number">1</div>
+                        <div >
+                            <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                            <p class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </article>
+
+                    <div class="timeline__connector timeline__connector--1-2">
+                        <img src="img/way_one_to_two.svg" alt="" class="timeline__connector-line">
+                    </div>
+
+                    <article class="timeline__item timeline__item--2">
+                        <div class="timeline__number">2</div>
+                        <div >
+                            <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                            <p class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </article>
+
+                    <div class="timeline__connector timeline__connector--2-3">
+                        <img src="img/way_two_to_three.svg" alt="" class="timeline__connector-line">
+                    </div>
+
+                    <article class="timeline__item timeline__item--3">
+                        <div class="timeline__number">3</div>
+                        <div >
+                            <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                            <p class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </article>
+
+                    <div class="timeline__connector timeline__connector--3-4">
+                        <img src="img/way_three_to_four.svg" alt="" class="timeline__connector-line">
+                    </div>
+
+                    <article class="timeline__item timeline__item--4">
+                        <div class="timeline__number">4</div>
+                        <div >
+                            <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                            <p class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </article>
+
+                    <div class="timeline__connector timeline__connector--4-5">
+                        <img src="img/way_four_to_five.svg" alt="" class="timeline__connector-line">
+                    </div>
+
+                    <article class="timeline__item timeline__item--5">
+                        <div class="timeline__number">5</div>
+                        <div >
+                            <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                            <p class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </article>
+
+                    <div class="timeline__connector timeline__connector--5-6">
+                        <img src="img/way_five_to_six.svg" alt="" class="timeline__connector-line">
+                    </div>
+
+                    <article class="timeline__item timeline__item--6">
+                        <div class="timeline__number">6</div>
+                        <div >
+                            <img src="img/card_icon.svg" alt="" class="timeline__text-icon">
+                            <p class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div class="main__button">
+                <button class="main__btn" type="button" id="openModal">INFO</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" type="button" aria-label="Закрыть">&times;</button>
+            <div class="modal__body">
+                <p>Lorem ipsum dolor sit, amet consectetur adipiscing elit. In accusantium, aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque consectetur accusamus, impedit molestiae ut enim! Lorem ipsum dolor sit, amet consectetur adipiscing elit. In accusantium, aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque consectetur accusamus, impedit molestiae ut enim! Lorem ipsum dolor sit, amet consectetur adipiscing elit. In accusantium, aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque consectetur accusamus, impedit molestiae ut enim! Lorem ipsum dolor sit, amet consectetur adipiscing elit. In accusantium, aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque consectetur accusamus, impedit molestiae ut enim!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript файлы будут автоматически подключены webpack'ом -->
+</body>
+
+</html>
